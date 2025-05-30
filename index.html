@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Xenov AimSilent</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1a1a2e;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .menu {
+      width: 300px;
+      background-color: #0f0f1f;
+      border: 2px solid #1f1f3f;
+      padding: 20px;
+      margin: 50px auto;
+      border-radius: 10px;
+    }
+
+    .title {
+      color: #ff3399;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 5px;
+      text-align: center;
+      background-color: #1f1f3f;
+      margin-right: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .tab:last-child {
+      margin-right: 0;
+    }
+
+    .function {
+      margin: 5px 0;
+    }
+
+    .function input[type="checkbox"] {
+      margin-right: 10px;
+      accent-color: #3399ff;
+    }
+
+    .slider-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .slider {
+      width: 70%;
+    }
+
+    .status {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #00ff00;
+    }
+
+    label {
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="menu">
+  <div class="title">PEDPRO <strong>MENUt</strong></div>
+  <div class="tabs">
+    <div class="tab">PEDPRO</div>
+    <div class="tab">VIP</div>
+    <div class="tab">PANEL</div>
+  </div>
+
+  <div class="function"><input type="checkbox" id="silentAim"><label for="silentAim">ดูดหัว 99%</label></div>
+  <div class="function"><input type="checkbox" id="ignoreKnocked"><label for="ignoreKnocked">ช่วยลาก VIP 99%</label></div>
+  <div class="function"><input type="checkbox" id="noRecoil"><label for="noRecoil">กระสุนตรง 80%</label></div>
+  <div class="function"><input type="checkbox" id="aimfovCircle"><label for="aimfovCircle">สไนล็อค</label></div>
+  <div class="function"><input type="checkbox" id="teleKill"><label for="teleKill">สับไว</label></div>
+  <div class="function"><input type="checkbox" id="upPlayer"><label for="upPlayer">สับปืนตาย</label></div>
+
+  <div class="slider-container">
+    <label for="aimfov">ปรับความดูด</label>
+    <input class="slider" type="range" id="aimfov" min="0" max="500" value="400">
+  </div>
+  <div class="slider-container">
+    <label for="smooth">ปรับความไวจอ</label>
+    <input class="slider" type="range" id="smooth" min="0" max="100" value="30">
+  </div>
+  <div class="slider-container">
+    <label for="distance">ปรับระยะสับปืน</label>
+    <input class="slider" type="range" id="distance" min="0" max="100" value="60">
+  </div>
+
+  <div class="status">Status : Connected</div>
+</div>
+
+</body>
+</html>
